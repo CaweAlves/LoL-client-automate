@@ -1,8 +1,10 @@
-from View.View_first_screen import View_first_screen
+from Model.Recognition import Recognition
+from Model.Click import Click
 
 class Main:
-    def __init__(self) -> None:
-        View_first_screen()
-
-tela = Main()
+    def Main():
+        recognitionPick = Recognition('arquivo.png')
+            
+        
+inicio = Main.Main()
 
