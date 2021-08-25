@@ -7,10 +7,8 @@ class Recognition:
         self.position = pg.locateCenterOnScreen(directory)
         print(pg.locateCenterOnScreen(directory))          
         if self.position != None:
-            print("first condition")
             return Click(self.position)
-        else:
-            print("second condition")
+        else:   
             del self.position
             gc.collect()
             return Recognition(directory)
