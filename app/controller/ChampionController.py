@@ -18,17 +18,11 @@ class ChampionController:
                     image = image.resize(
                         (int(image.size[0] / 2), int(image.size[1] / 2)))
                     image.save(champion + '.png')
-                    print('image resized -----')
-                    print(champion)
                     location = rec.find_image(champion + '.png')
-                    print(location)
                     if location:
-                        print(location)
                         pg.click(location)
-                        return print('found')
-                    print(str(i))
+                        return print('found in ' + str(location))
                     if i == 3:
-                        print('image not found +++++')
                         image.close()
                         urllib.request.urlretrieve(
                             'http://ddragon.leagueoflegends.com/cdn/12.20.1/img/champion/' + champion + '.png', champion + '.png')

@@ -8,9 +8,6 @@ class Main:
 
     async def main():
         select_champion = asyncio.create_task(ChampionController.find_champion('Ahri'))
-        teste_async_loop = asyncio.create_task(ChampionController.find_champion('Vayne'))
-
-        await teste_async_loop
         await select_champion
 
 asyncio.run(Main.main())
